@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viacore Advisory - Strategic Asset Management Consultancy. Clarity at the Core of Strategic Asset Management.">
+    <title>Viacore Advisory | Strategic Asset Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e4158;
+            --primary-grey: #5a5a5a;
+            --light-grey: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            background: var(--white);
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 120px;
+            background: linear-gradient(135deg, var(--light-grey) 0%, var(--white) 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: var(--primary-grey);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #15303f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(30, 65, 88, 0.25);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: var(--light-grey);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--primary-grey);
+            font-size: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--light-grey);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-leader {
+            text-align: center;
+        }
+
+        .leader-avatar {
+            width: 160px;
+            height: 160px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .leader-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .leader-title {
+            font-size: 1rem;
+            color: var(--primary-grey);
+            margin-bottom: 16px;
+        }
+
+        .linkedin-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .linkedin-link:hover {
+            text-decoration: underline;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .experience-highlight {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .highlight-item {
+            text-align: center;
+        }
+
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .highlight-label {
+            font-size: 0.9rem;
+            color: var(--primary-grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .contact p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: #15303f;
+            color: var(--white);
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .experience-highlight {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="viacore.png" alt="Viacore Advisory" class="logo">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Strategic Asset Management Advisory</h1>
+                <p class="tagline">Clarity at the Core of Strategic Asset Management</p>
+                <p>Viacore Advisory delivers outcome-driven solutions across asset and facilities management. We provide end-to-end strategic planning and innovative asset management solutions that drive long-term value for your organisation.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Strategic Asset Advisory</h3>
+                    <p>Comprehensive asset audits and lifecycle management strategies to optimise your portfolio performance and maximise long-term value.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Facilities Management Advisory</h3>
+                    <p>Expert guidance on facilities operations, maintenance strategies, and service delivery optimisation across your property portfolio.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Risk & Compliance Management</h3>
+                    <p>Proactive risk identification and compliance frameworks to protect your assets and ensure regulatory adherence.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sustainability Solutions</h3>
+                    <p>Sustainable property strategies that reduce environmental impact while delivering operational efficiencies and cost savings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-leader">
+                    <div class="leader-avatar">WD</div>
+                    <h3 class="leader-name">William Dorahy</h3>
+                    <p class="leader-title">CEO & Director</p>
+                    <a href="https://www.linkedin.com/in/williamdorahy-2b480997" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+                <div class="about-text">
+                    <h2>Leadership & Experience</h2>
+                    <p>With nearly two decades of experience in building services and property consultancy, Will Dorahy brings unparalleled expertise to strategic asset and facilities management advisory.</p>
+                    <p>Having progressed through senior leadership roles including Head of Advisory, National Service Line Manager, and National Operations Manager, Will has successfully led advisory services across Australia and New Zealand, driving high-impact initiatives and achieving significant results across the built environment.</p>
+                    <p>Viacore Advisory is built on a foundation of developing long-standing client partnerships through end-to-end strategic planning and innovative asset management solutions.</p>
+                    <div class="experience-highlight">
+                        <div class="highlight-item">
+                            <div class="highlight-number">20+</div>
+                            <div class="highlight-label">Years Experience</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">AU & NZ</div>
+                            <div class="highlight-label">Coverage</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">End-to-End</div>
+                            <div class="highlight-label">Solutions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Optimise Your Assets?</h2>
+            <p>Let's discuss how Viacore Advisory can deliver clarity and value to your asset portfolio.</p>
+            <a href="mailto:willdorahy@outlook.com" class="contact-email">willdorahy@outlook.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Viacore Advisory. All rights reserved. | Sydney, Australia</p>
+        </div>
+    </footer>
+</body>
+</html>
