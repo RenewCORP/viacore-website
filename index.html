@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Viacore Advisory - Strategic Asset Management Consultancy. Clarity at the Core of Strategic Asset Management.">
-    <title>Viacore Advisory | Strategic Asset Management</title>
+    <meta name="description" content="ViaCore Advisory - Independent Strategic Asset Management Consultancy. Clarity at the Core of Strategic Asset Management.">
+    <title>ViaCore Advisory | Strategic Asset Management</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,12 +50,21 @@
 
         /* Hero Section */
         .hero {
-            padding: 100px 0 120px;
+            padding: 100px 0 80px;
             background: linear-gradient(135deg, var(--light-grey) 0%, var(--white) 100%);
         }
 
         .hero-content {
             max-width: 800px;
+        }
+
+        .hero-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
         }
 
         .hero h1 {
@@ -77,7 +86,7 @@
             font-size: 1.125rem;
             color: var(--text-dark);
             margin-bottom: 40px;
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .cta-button {
@@ -98,18 +107,53 @@
             box-shadow: 0 8px 24px rgba(30, 65, 88, 0.25);
         }
 
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-            background: var(--white);
+        /* Value Props */
+        .value-props {
+            display: flex;
+            gap: 48px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
         }
 
+        .value-prop {
+            flex: 1;
+        }
+
+        .value-prop h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .value-prop p {
+            font-size: 0.9rem;
+            color: var(--primary-grey);
+            margin-bottom: 0;
+        }
+
+        /* Section Styles */
         .section-title {
             font-size: 2rem;
             font-weight: 600;
             color: var(--primary-blue);
-            margin-bottom: 60px;
+            margin-bottom: 16px;
             text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--primary-grey);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--white);
         }
 
         .services-grid {
@@ -132,9 +176,94 @@
             margin-bottom: 16px;
         }
 
-        .service-card p {
+        .service-card > p {
             color: var(--primary-grey);
             font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card li {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+        }
+
+        /* Why ViaCore Section */
+        .why-viacore {
+            padding: 100px 0;
+            background: var(--light-grey);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .why-card {
+            padding: 32px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .why-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            color: var(--primary-grey);
+            margin: 0;
+        }
+
+        /* Sectors Section */
+        .sectors {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .sector-card {
+            padding: 24px;
+            background: var(--light-grey);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .sector-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .sector-card p {
+            font-size: 0.85rem;
+            color: var(--primary-grey);
+            margin: 0;
         }
 
         /* About Section */
@@ -284,6 +413,12 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .sectors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -291,6 +426,11 @@
 
             .hero .tagline {
                 font-size: 1.2rem;
+            }
+
+            .value-props {
+                flex-direction: column;
+                gap: 24px;
             }
 
             .about-content {
@@ -303,7 +443,12 @@
                 gap: 24px;
             }
 
-            .services-grid {
+            .services-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sectors-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -312,40 +457,165 @@
 <body>
     <header>
         <div class="container">
-            <img src="viacore.png" alt="Viacore Advisory" class="logo">
+            <img src="viacore.png" alt="ViaCore Advisory" class="logo">
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Strategic Asset Management Advisory</h1>
-                <p class="tagline">Clarity at the Core of Strategic Asset Management</p>
-                <p>Viacore Advisory delivers outcome-driven solutions across asset and facilities management. We provide end-to-end strategic planning and innovative asset management solutions that drive long-term value for your organisation.</p>
-                <a href="#contact" class="cta-button">Get in Touch</a>
+                <p class="hero-label">Independent Advisory Services</p>
+                <h1>Clarity at the Core of Strategic Asset Management</h1>
+                <p>ViaCore Advisory transforms complex asset information into strategic intelligence, empowering confident, evidence-based decisions across your entire portfolio.</p>
+                <a href="#contact" class="cta-button">Start a Conversation</a>
+            </div>
+            <div class="value-props">
+                <div class="value-prop">
+                    <h4>Independent & Unbiased</h4>
+                    <p>No contractor affiliations</p>
+                </div>
+                <div class="value-prop">
+                    <h4>Evidence-Based</h4>
+                    <p>Data-driven intelligence</p>
+                </div>
+                <div class="value-prop">
+                    <h4>Sustainability Focus</h4>
+                    <p>ESG & decarbonisation</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Our Advisory Solutions</h2>
+            <p class="section-subtitle">Our advisory model integrates asset data, lifecycle strategy, risk, compliance, sustainability, and operational performance — providing clarity at the core of Strategic Asset Management.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Strategic Asset Advisory</h3>
-                    <p>Comprehensive asset audits and lifecycle management strategies to optimise your portfolio performance and maximise long-term value.</p>
+                    <h3>Asset Advisory</h3>
+                    <p>Accurate, structured asset information to underpin confident decision-making.</p>
+                    <ul>
+                        <li>Asset validation and field verification</li>
+                        <li>Condition assessment (physical, operational & risk aligned)</li>
+                        <li>ISO 55000 alignment and maturity benchmarking</li>
+                        <li>Asset register optimisation</li>
+                        <li>CMMS/EAM data optimisation</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>Facilities Management Advisory</h3>
-                    <p>Expert guidance on facilities operations, maintenance strategies, and service delivery optimisation across your property portfolio.</p>
+                    <h3>Operational Risk & Contract Advisory</h3>
+                    <p>Strengthening FM governance, regulatory compliance and service performance.</p>
+                    <ul>
+                        <li>Technical due diligence</li>
+                        <li>FM contract mobility and transition assessments</li>
+                        <li>Property and asset regulatory compliance reviews</li>
+                        <li>Contractor maintenance compliance audits</li>
+                        <li>Procurement and tender technical advisory</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>Risk & Compliance Management</h3>
-                    <p>Proactive risk identification and compliance frameworks to protect your assets and ensure regulatory adherence.</p>
+                    <h3>Lifecycle Strategy & Capital Planning</h3>
+                    <p>Supporting long-term asset performance and portfolio-level risk management.</p>
+                    <ul>
+                        <li>Whole-of-life and Remaining Useful Life modelling</li>
+                        <li>10–20 year CapEx and OpEx financial planning</li>
+                        <li>Capital prioritisation frameworks</li>
+                        <li>Strategic Asset Management Plans (SAMPs)</li>
+                        <li>Long-term asset renewal strategies</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>Sustainability Solutions</h3>
-                    <p>Sustainable property strategies that reduce environmental impact while delivering operational efficiencies and cost savings.</p>
+                    <h3>Sustainability, Energy & ESG</h3>
+                    <p>Enabling sustainable, resilient and future-ready asset portfolios.</p>
+                    <ul>
+                        <li>Lifecycle decarbonisation modelling</li>
+                        <li>Climate risk and resilience assessments</li>
+                        <li>Net-zero pathway planning</li>
+                        <li>Energy and water audits (Level 1-3)</li>
+                        <li>ESG readiness and performance strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-viacore" id="why">
+        <div class="container">
+            <h2 class="section-title">Why Choose ViaCore</h2>
+            <p class="section-subtitle">What sets us apart in delivering strategic asset management advisory services.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Independent and Unbiased</h3>
+                    <p>We operate entirely independently of maintenance contractors and service providers. Our advice is impartial and aligned solely with your organisation's objectives.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Strategic Intelligence, Not Just Data</h3>
+                    <p>We transform asset information into structured, actionable intelligence that supports strategic planning and whole-of-life decision-making.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Risk-Led Asset Management</h3>
+                    <p>A structured, risk-based approach integrating capital prioritisation, lifecycle strategy, safety compliance and operational readiness.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Clarity in Complex Environments</h3>
+                    <p>We specialise in resolving fragmented or incomplete asset data — establishing reliable baselines for confident, evidence-based decisions.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Consistent, Scalable Methodologies</h3>
+                    <p>Our frameworks bring organisation-wide consistency, improving transparency and long-term planning accuracy across entire portfolios.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Operational Understanding</h3>
+                    <p>We understand how assets behave in real operational environments, enabling practical recommendations that balance risk, functionality, and cost.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Integrated Sustainability Focus</h3>
+                    <p>Decarbonisation, climate risk and ESG considerations are embedded directly into lifecycle and capital strategies for resilient portfolios.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Clear, Actionable Outcomes</h3>
+                    <p>Structured prioritisation, transparent reasoning and practical implementation pathways — enabling decision-makers to act with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sectors" id="sectors">
+        <div class="container">
+            <h2 class="section-title">Sector Experience</h2>
+            <p class="section-subtitle">ViaCore Advisory brings cross-sector experience, supporting organisations that manage complex, high-dependency asset portfolios.</p>
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <h3>Healthcare</h3>
+                    <p>Hospitals, clinical facilities and high-dependency care environments</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Aged Care & Retirement</h3>
+                    <p>Residential care, memory support and independent living assets</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Government & Public Sector</h3>
+                    <p>Civic infrastructure, community facilities and operational buildings</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Education</h3>
+                    <p>Schools, TAFEs, universities and multi-building campuses</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Commercial Real Estate</h3>
+                    <p>Office buildings, business parks and mixed-use assets</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Industrial & Manufacturing</h3>
+                    <p>Industrial plants, logistics centres and operational facilities</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Not-for-Profit</h3>
+                    <p>Community organisations and service-based facilities</p>
+                </div>
+                <div class="sector-card">
+                    <h3>Strata & Property</h3>
+                    <p>Multi-unit residential and strata-managed properties</p>
                 </div>
             </div>
         </div>
@@ -358,7 +628,7 @@
                     <div class="leader-avatar">WD</div>
                     <h3 class="leader-name">William Dorahy</h3>
                     <p class="leader-title">CEO & Director</p>
-                    <a href="https://www.linkedin.com/in/williamdorahy-2b480997" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                    <a href="https://www.linkedin.com/in/william-dorahy-2b480997" target="_blank" rel="noopener noreferrer" class="linkedin-link">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
@@ -369,7 +639,7 @@
                     <h2>Leadership & Experience</h2>
                     <p>With nearly two decades of experience in building services and property consultancy, Will Dorahy brings unparalleled expertise to strategic asset and facilities management advisory.</p>
                     <p>Having progressed through senior leadership roles including Head of Advisory, National Service Line Manager, and National Operations Manager, Will has successfully led advisory services across Australia and New Zealand, driving high-impact initiatives and achieving significant results across the built environment.</p>
-                    <p>Viacore Advisory is built on a foundation of developing long-standing client partnerships through end-to-end strategic planning and innovative asset management solutions.</p>
+                    <p>ViaCore Advisory is built on a foundation of developing long-standing client partnerships through end-to-end strategic planning and innovative asset management solutions.</p>
                     <div class="experience-highlight">
                         <div class="highlight-item">
                             <div class="highlight-number">20+</div>
@@ -391,15 +661,15 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Ready to Optimise Your Assets?</h2>
-            <p>Let's discuss how Viacore Advisory can deliver clarity and value to your asset portfolio.</p>
+            <h2>Let's Discuss Your Asset Strategy</h2>
+            <p>For enquiries, project discussions or to learn more about how ViaCore Advisory can support your organisation, please reach out.</p>
             <a href="mailto:willd@viacore.com.au" class="contact-email">willd@viacore.com.au</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Viacore Advisory. All rights reserved. | Sydney, Australia</p>
+            <p>&copy; 2025 ViaCore Advisory. All rights reserved. | Sydney, Australia</p>
         </div>
     </footer>
 </body>
